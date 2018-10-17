@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6152F0042176E41F006765AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F0032176E41F006765AD /* UIKit.framework */; };
+		6152F0062176E41F006765AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F0052176E41F006765AD /* Foundation.framework */; };
+		6152F0082176E41F006765AD /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F0072176E41F006765AD /* CydiaSubstrate.framework */; };
+		6152F0112176E41F006765AD /* dog_hook.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6152F0102176E41F006765AD /* dog_hook.mm */; };
+		6152F0212176E44D006765AD /* TestHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152F01B2176E44D006765AD /* TestHook.m */; };
+		6152F0222176E44D006765AD /* TestHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 6152F01C2176E44D006765AD /* TestHook.h */; };
+		6152F0232176E44D006765AD /* CAPI_Hook.h in Headers */ = {isa = PBXBuildFile; fileRef = 6152F01D2176E44D006765AD /* CAPI_Hook.h */; };
+		6152F0242176E44D006765AD /* CAPI_Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152F01E2176E44D006765AD /* CAPI_Hook.m */; };
+		6152F0252176E44D006765AD /* OCDataHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152F01F2176E44D006765AD /* OCDataHook.m */; };
+		6152F0262176E44D006765AD /* OCDataHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 6152F0202176E44D006765AD /* OCDataHook.h */; };
+		6152F0282176E4A9006765AD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F0272176E4A9006765AD /* libz.tbd */; };
+		6152F02A21770B20006765AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F02921770B20006765AD /* SystemConfiguration.framework */; };
+		6152F02C21770B26006765AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F02B21770B26006765AD /* CFNetwork.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6152F0002176E41F006765AD /* dog_hook.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = dog_hook.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		6152F0032176E41F006765AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6152F0052176E41F006765AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6152F0072176E41F006765AD /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
+		6152F00C2176E41F006765AD /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		6152F00E2176E41F006765AD /* dog_hook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dog_hook-Prefix.pch"; sourceTree = "<group>"; };
+		6152F00F2176E41F006765AD /* dog_hook.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = dog_hook.xm; sourceTree = "<group>"; };
+		6152F0102176E41F006765AD /* dog_hook.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = dog_hook.mm; sourceTree = "<group>"; };
+		6152F0152176E41F006765AD /* dog_hook.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = dog_hook.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/dog_hook.plist; sourceTree = "<group>"; };
+		6152F01B2176E44D006765AD /* TestHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHook.m; sourceTree = "<group>"; };
+		6152F01C2176E44D006765AD /* TestHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHook.h; sourceTree = "<group>"; };
+		6152F01D2176E44D006765AD /* CAPI_Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPI_Hook.h; sourceTree = "<group>"; };
+		6152F01E2176E44D006765AD /* CAPI_Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPI_Hook.m; sourceTree = "<group>"; };
+		6152F01F2176E44D006765AD /* OCDataHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDataHook.m; sourceTree = "<group>"; };
+		6152F0202176E44D006765AD /* OCDataHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDataHook.h; sourceTree = "<group>"; };
+		6152F0272176E4A9006765AD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6152F02921770B20006765AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6152F02B21770B26006765AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6152EFFC2176E41F006765AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6152F02C21770B26006765AD /* CFNetwork.framework in Frameworks */,
+				6152F02A21770B20006765AD /* SystemConfiguration.framework in Frameworks */,
+				6152F0282176E4A9006765AD /* libz.tbd in Frameworks */,
+				6152F0042176E41F006765AD /* UIKit.framework in Frameworks */,
+				6152F0062176E41F006765AD /* Foundation.framework in Frameworks */,
+				6152F0082176E41F006765AD /* CydiaSubstrate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6152EFF52176E41F006765AD = {
+			isa = PBXGroup;
+			children = (
+				6152F0092176E41F006765AD /* dog_hook */,
+				6152F0022176E41F006765AD /* Frameworks */,
+				6152F0012176E41F006765AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6152F0012176E41F006765AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6152F0002176E41F006765AD /* dog_hook.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6152F0022176E41F006765AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6152F02B21770B26006765AD /* CFNetwork.framework */,
+				6152F02921770B20006765AD /* SystemConfiguration.framework */,
+				6152F0272176E4A9006765AD /* libz.tbd */,
+				6152F0032176E41F006765AD /* UIKit.framework */,
+				6152F0052176E41F006765AD /* Foundation.framework */,
+				6152F0072176E41F006765AD /* CydiaSubstrate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6152F0092176E41F006765AD /* dog_hook */ = {
+			isa = PBXGroup;
+			children = (
+				6152F01D2176E44D006765AD /* CAPI_Hook.h */,
+				6152F01E2176E44D006765AD /* CAPI_Hook.m */,
+				6152F0202176E44D006765AD /* OCDataHook.h */,
+				6152F01F2176E44D006765AD /* OCDataHook.m */,
+				6152F01C2176E44D006765AD /* TestHook.h */,
+				6152F01B2176E44D006765AD /* TestHook.m */,
+				6152F00F2176E41F006765AD /* dog_hook.xm */,
+				6152F0102176E41F006765AD /* dog_hook.mm */,
+				6152F00A2176E41F006765AD /* Package */,
+				6152F00D2176E41F006765AD /* Supporting Files */,
+			);
+			path = dog_hook;
+			sourceTree = "<group>";
+		};
+		6152F00A2176E41F006765AD /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				6152F00B2176E41F006765AD /* DEBIAN */,
+				6152F0122176E41F006765AD /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		6152F00B2176E41F006765AD /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				6152F00C2176E41F006765AD /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		6152F00D2176E41F006765AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6152F00E2176E41F006765AD /* dog_hook-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6152F0122176E41F006765AD /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				6152F0132176E41F006765AD /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		6152F0132176E41F006765AD /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				6152F0142176E41F006765AD /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		6152F0142176E41F006765AD /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				6152F0152176E41F006765AD /* dog_hook.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6152EFFD2176E41F006765AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6152F0232176E44D006765AD /* CAPI_Hook.h in Headers */,
+				6152F0262176E44D006765AD /* OCDataHook.h in Headers */,
+				6152F0222176E44D006765AD /* TestHook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6152EFFF2176E41F006765AD /* dog_hook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6152F0182176E41F006765AD /* Build configuration list for PBXNativeTarget "dog_hook" */;
+			buildPhases = (
+				6152EFFA2176E41F006765AD /* ShellScript */,
+				6152EFFB2176E41F006765AD /* Sources */,
+				6152EFFC2176E41F006765AD /* Frameworks */,
+				6152EFFD2176E41F006765AD /* Headers */,
+				6152EFFE2176E41F006765AD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dog_hook;
+			productName = dog_hook;
+			productReference = 6152F0002176E41F006765AD /* dog_hook.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6152EFF62176E41F006765AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					6152EFFF2176E41F006765AD = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 6152EFF92176E41F006765AD /* Build configuration list for PBXProject "dog_hook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6152EFF52176E41F006765AD;
+			productRefGroup = 6152F0012176E41F006765AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6152EFFF2176E41F006765AD /* dog_hook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6152EFFA2176E41F006765AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+		6152EFFE2176E41F006765AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6152EFFB2176E41F006765AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6152F0252176E44D006765AD /* OCDataHook.m in Sources */,
+				6152F0212176E44D006765AD /* TestHook.m in Sources */,
+				6152F0112176E41F006765AD /* dog_hook.mm in Sources */,
+				6152F0242176E44D006765AD /* CAPI_Hook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6152F0162176E41F006765AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"dog_hook\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6152F0172176E41F006765AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"dog_hook\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		6152F0192176E41F006765AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 593RF3MKUX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dog_hook/dog_hook-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = NO;
+				MonkeyDevInstallOnProfiling = NO;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6152F01A2176E41F006765AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 593RF3MKUX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dog_hook/dog_hook-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = NO;
+				MonkeyDevInstallOnProfiling = NO;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6152EFF92176E41F006765AD /* Build configuration list for PBXProject "dog_hook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6152F0162176E41F006765AD /* Release */,
+				6152F0172176E41F006765AD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6152F0182176E41F006765AD /* Build configuration list for PBXNativeTarget "dog_hook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6152F0192176E41F006765AD /* Release */,
+				6152F01A2176E41F006765AD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6152EFF62176E41F006765AD /* Project object */;
+}
