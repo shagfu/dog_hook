@@ -20,6 +20,7 @@
 		6152F0282176E4A9006765AD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F0272176E4A9006765AD /* libz.tbd */; };
 		6152F02A21770B20006765AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F02921770B20006765AD /* SystemConfiguration.framework */; };
 		6152F02C21770B26006765AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F02B21770B26006765AD /* CFNetwork.framework */; };
+		6152F02E217710F4006765AD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152F02D217710F4006765AD /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		6152F0272176E4A9006765AD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6152F02921770B20006765AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6152F02B21770B26006765AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6152F02D217710F4006765AD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6152F02E217710F4006765AD /* AdSupport.framework in Frameworks */,
 				6152F02C21770B26006765AD /* CFNetwork.framework in Frameworks */,
 				6152F02A21770B20006765AD /* SystemConfiguration.framework in Frameworks */,
 				6152F0282176E4A9006765AD /* libz.tbd in Frameworks */,
@@ -80,6 +83,7 @@
 		6152F0022176E41F006765AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6152F02D217710F4006765AD /* AdSupport.framework */,
 				6152F02B21770B26006765AD /* CFNetwork.framework */,
 				6152F02921770B20006765AD /* SystemConfiguration.framework */,
 				6152F0272176E4A9006765AD /* libz.tbd */,

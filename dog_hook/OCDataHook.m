@@ -9,6 +9,7 @@
 #include <mach-o/dyld.h>
 #include <substrate.h>
 #include <objc/objc-runtime.h>
+#import <AdSupport/ASIdentifierManager.h>
 #import <UIKit/UIKit.h>
 
 
@@ -34,9 +35,11 @@ id  rep_NSArray_objectAtIndex(id self,SEL _cmd,NSUInteger index);
 NSDictionary* rep_NSJSONSerialization_JSONObjectWithData(id self,SEL _cmd,NSData *data,NSJSONReadingOptions opt,NSError ** error);
 void rep_NSMutableDictionary_setvalue(id self,SEL _cmd,id key,id value);
 //UIDevice
+NSData * rep_NSJSONSerialization_dataWithJSONObject(id self,SEL _cmd,id object,NSJSONWritingOptions opt,NSError ** error);
 IMP  UIDevice_name;
 IMP  UIDevice_systemVersion;
 IMP  UIDevice_identifierForVendor;
+NSUUID* rep_ASIdentifierManager_advertisingIdentifier(id self,SEL _cmd);
 NSString*  rep_UIDevice_name(id self,SEL _cmd);
 NSString*  rep_UIDevice_systemVersion(id self,SEL _cmd);
 NSUUID* rep_UIDevice_identifierForVendor(id self,SEL _cmd);
@@ -131,6 +134,21 @@ NSUUID* rep_UIDevice_identifierForVendor(id self,SEL _cmd)
     NSLog(@"-----------------rep_UIDevice_identifierForVendor ==%@",ret);
     return ret;
 }
+IMP NSJSONSerialization_dataWithJSONObject;
+
+NSData * rep_NSJSONSerialization_dataWithJSONObject(id self,SEL _cmd,id object,NSJSONWritingOptions opt,NSError ** error)
+{
+    NSLog(@"-----------------rep_NSJSONSerialization_dataWithJSONObject ==%@",object);
+    return NSJSONSerialization_dataWithJSONObject(self,_cmd,object,opt,error);
+}
+IMP ASIdentifierManager_advertisingIdentifier;
+NSUUID* rep_ASIdentifierManager_advertisingIdentifier(id self,SEL _cmd)
+{
+    NSUUID *ret=ASIdentifierManager_advertisingIdentifier(self,_cmd);
+    NSLog(@"-----------------ASIdentifierManager_advertisingIdentifier ==%@",ret);
+    return ret;
+
+}
 -(void)doHook
 {
     //NSString
@@ -147,10 +165,14 @@ NSUUID* rep_UIDevice_identifierForVendor(id self,SEL _cmd)
     MSHookMessageEx([NSMutableDictionary class], @selector(setObject:forKey:),(IMP)rep_NSMutableDictionary_setvalue , &NSMutableDictionary_setvalue);
     //NSJSONSerialization
     MSHookMessageEx(objc_getMetaClass("NSJSONSerialization"), @selector(JSONObjectWithData:options:error:),(IMP)rep_NSJSONSerialization_JSONObjectWithData,(IMP*)&NSJSONSerialization_JSONObjectWithData);
+    MSHookMessageEx(objc_getMetaClass("NSJSONSerialization"), @selector(dataWithJSONObject:options:error:), NSJSONSerialization_dataWithJSONObject, &NSJSONSerialization_dataWithJSONObject);
    // NSArray *arr1;
+    //UIDevice
     MSHookMessageEx([UIDevice class],@selector(name),(IMP)rep_UIDevice_name,(IMP*)&UIDevice_name);
     MSHookMessageEx([UIDevice class],@selector(systemVersion),(IMP)rep_UIDevice_systemVersion,(IMP*)&UIDevice_systemVersion);
     MSHookMessageEx([UIDevice class],@selector(identifierForVendor),(IMP)rep_UIDevice_identifierForVendor,(IMP*)&UIDevice_identifierForVendor);
+    
+    MSHookMessageEx([ASIdentifierManager class], @selector(advertisingIdentifier), (IMP)rep_ASIdentifierManager_advertisingIdentifier, (IMP*)&ASIdentifierManager_advertisingIdentifier);
 
 }
 @end

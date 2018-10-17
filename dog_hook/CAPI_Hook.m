@@ -114,7 +114,7 @@ MSHook(int, sysctl, int *name,u_int namelen,void *oldp,size_t *oldlenp,const voi
     {
         if(name[1]==KERN_PROC)
         {
-            NSLog(@"-----**********----sysctl KERN_PROC");
+            //NSLog(@"-----**********----sysctl KERN_PROC");
             
         }else if(name[1]==KERN_BOOTTIME)
         {
